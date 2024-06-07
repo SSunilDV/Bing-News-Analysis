@@ -9,43 +9,42 @@ This project involves ingesting news data daily from the Bing API and generating
 ## Topics Covered
 
 1. **Data Ingestion from Bing API using Data Factory:** 
-   - Pulled in data from Bing using Bing api while using the news endpoint and also using the headers with query parameters inorder to filter to last 24hours, setting the foundation for the analytics project. Also used the dynamic content in order to generate content based on given category. The key for the api is generated in Azure. In the end the data is saved into a JSON file.
-   
+   - Pulled in data from Bing using the Bing API, utilizing the news endpoint and applying headers with query parameters to filter the data to the last 24 hours. Dynamic content was used to generate content based on a given category. The API key was generated in Azure, and the data was saved into a JSON file.
+
 2. **Data Transformation using Synapse Data Engineering:** 
-   - Shaped and refined raw JSON data to a curated Delta Table, including techniques like incremental loading to keep processes efficient. This Data Transformation includes the filtering of rows by removing null values and removing unimportant columns like images and further formating the date and time published column to only date. All the code used in the notebook was PySpark.
+   - Shaped and refined raw JSON data into a curated Delta Table, including techniques like incremental loading to maintain efficiency. The transformation process included filtering rows by removing null values and unimportant columns like images, and formatting the date and time published column to only include the date. All the code used in the notebook was written in PySpark.
 
 3. **Sentiment Analysis using Synapse Data Science:** 
-   - Predicted the sentiment of the news classified as Positive, Negative, mixed or Neutral by analyzing the news description. This was done using the synapse data science where importing the model from synapse ml services library and then making a seperate column for the sentiment predicted for each news description in the table.
+   - Predicted the sentiment of the news, classifying it as Positive, Negative, Mixed, or Neutral by analyzing the news descriptions. This was done using Synapse Data Science, importing the model from the Synapse ML services library, and creating a separate column for the sentiment predicted for each news description in the table.
 
 4. **Orchestration using Data Factory via pipelines:** 
    - Ensured smooth and efficient operations by orchestrating data workflows.
 
 5. **Data Reporting using Power BI:** 
-   - Visualized data in a compelling and actionable manner also by creating the measures seperately for the sentiment in Power BI and also explored the Auto generate feature.
+   - Visualized data in a compelling and actionable manner, creating measures for the sentiment in Power BI and exploring the Auto-generate feature.
 
 6. **Configuring Alerts using the Data Activator:** 
-   - Setting up alerts and notifications within Power BI visuals using a new tool called Data Activator to stay ahead of potential issues. The Alerts were tested where the alert was received using Microsoft teams.
+   - Set up alerts and notifications within Power BI visuals using a new tool called Data Activator to stay ahead of potential issues. The alerts were tested, and notifications were received via Microsoft Teams.
 
 7. **End to End Pipeline Testing:** 
    - Validated the integrity and performance of pipelines, ensuring reliability and accuracy from data ingestion to report updates.
-
 
 ## Getting Started
 
 ### Prerequisites
 
 - Microsoft Azure Subscription
-- Create a new data resource for the project and then add Bing Api and Microsft fabric.
+- Create a new data resource for the project and then add Bing API and Microsoft Fabric.
 
 ### Installation
 
-1. Clone the repository
+1. Clone the repository:
    ```sh
    git clone https://github.com/SSunilDV/Bing-News-Analysis.git
    ```
 2. Set up Data Factory in Microsoft Fabric for data ingestion.
-3. Create data lake house in the synapse data engineering.
-4. Configure Synapse Data Engineering for data transformation(which includes the data pipeline).
+3. Create a data lake house in Synapse Data Engineering.
+4. Configure Synapse Data Engineering for data transformation (which includes the data pipeline).
 5. Implement sentiment analysis using Synapse Data Science.
 6. Set up Data Factory pipelines for orchestration.
 7. Create Power BI reports for data visualization.
@@ -61,16 +60,14 @@ This project involves ingesting news data daily from the Bing API and generating
 5. Monitor and receive alerts for data anomalies using Data Activator.
 6. Regularly test the pipeline to ensure seamless operation.
 
-
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-LinkedIn - [Sunil Durga Venkat](https://www.linkedin.com/in/sunil-durga-venkat/)
-
-Mail - [Gmail](sdvsurimalla@gmail.com) , [Outlook](sxs6577@mavs.uta.edu)
+- **LinkedIn:** [Sunil Durga Venkat](https://www.linkedin.com/in/sunil-durga-venkat/)
+- **Email:** [Gmail](mailto:sdvsurimalla@gmail.com), [Outlook](mailto:sxs6577@mavs.uta.edu)
 
 Project Link: [Bing-News-Analytics](https://github.com/SSunilDV/Bing-News-Analysis)
 
